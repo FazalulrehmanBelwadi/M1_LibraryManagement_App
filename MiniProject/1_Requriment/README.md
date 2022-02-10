@@ -51,16 +51,16 @@ This project is implemented to do the book issuing, retunrn, or renewal purpose 
 4) Remote Access.
 
 ### Weakness:
-1) The data stored is prone to cyber hacks.
+1) Leak of data due cyber hack 
 
 2) Costly and Expensive.
 
-3) Complicated to operate.
+3) Difficult operation due to complexity of system
 
-4) Online Systems require high-speed internet connectivity.
+4) Requirement of High speed Internet connectivity.
 
 ## Opportunities:
-The LMS leaks outward into new spaces, spaces which it didn’t inhabit before, such as reading lists repositories, learning systems, research data management and so forth. Furthermore, it is likely that the future of library systems will consist of a mixture of open and closed systems as well as local and shared (or hosted) services. With an increasing move towards closed platforms (like Facebook, for example) and proprietary ecosystems (like Apple), libraries will be required tonavigate these different spaces and ecosystems.
+ Library opportunities may present themselves in "economic, political/legal, technological, or sociocultural environments," Furthermore, it is likely that the future of library systems will consist of a mixture of open and closed systems as well as local and shared (or hosted) services. With an increasing move towards closed platforms (like Facebook, for example) and proprietary ecosystems (like Apple), libraries will be required tonavigate these different spaces and ecosystems.
 
 ### Threats:
 Libraries now send and retrieve data from databases to help better manage inventory and the like, but some libraries don’t have the right data encryption practices in place. This can often lead to lost data and sometimes, the data easily obtainable by criminals.
