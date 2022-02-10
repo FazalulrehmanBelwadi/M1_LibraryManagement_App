@@ -1,4 +1,1 @@
-Library Management System
-
-INTRODUCTION:
 
