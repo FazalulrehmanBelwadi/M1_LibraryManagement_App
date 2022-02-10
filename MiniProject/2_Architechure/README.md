@@ -1,7 +1,6 @@
 # **STRUCTURE DIAGRAMS**
-
 ## HIGH LEVEL DESIGN:
-![Uploading usecase.png…]()
+![usecase](https://user-images.githubusercontent.com/99134492/153453549-42b4879d-076d-42af-af2c-7176a7395561.png)
 
 # **BEHAVIOUR DIAGRAM**
 ## LOW LEVEL DESIGN:
