@@ -57,7 +57,7 @@ This project is implemented to do the book issuing, retunrn, or renewal purpose 
 
 3) Complicated to operate.
 
-d4) Online Systems require high-speed internet connectivity.
+4) Online Systems require high-speed internet connectivity.
 
 ## Opportunities:
 The LMS leaks outward into new spaces, spaces which it didn’t inhabit before, such as reading lists repositories, learning systems, research data management and so forth. Furthermore, it is likely that the future of library systems will consist of a mixture of open and closed systems as well as local and shared (or hosted) services. With an increasing move towards closed platforms (like Facebook, for example) and proprietary ecosystems (like Apple), libraries will be required tonavigate these different spaces and ecosystems.
