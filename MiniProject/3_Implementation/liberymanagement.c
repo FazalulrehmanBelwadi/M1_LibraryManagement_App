@@ -1,4 +1,4 @@
-// C program for the E-library
+// C program for the library
 // Management System
 #include <stdio.h>
 #include <stdlib.h>
@@ -30,7 +30,7 @@ int main()
 	while (input != 5) {
 
 		printf("\n\n********######"
-			"WELCOME TO E-LIBRARY "
+			"WELCOME TO LIBRARY "
 			"#####********\n");
 		printf("\n\n1. Add book infor"
 			"mation\n2. Display "
