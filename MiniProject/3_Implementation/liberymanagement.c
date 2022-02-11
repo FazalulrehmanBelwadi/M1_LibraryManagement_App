@@ -1,27 +1,26 @@
 // C program for the library
 // Management System
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.h>*/
 
-// Create Structure of Library
-struct library {
+
+/*struct library {
 	char book_name[20];
 	char author[20];
 	int pages;
 	float price;
-};
-
+};*/
+#include "library_management_system.h"
 // Driver Code
 int main()
 {
-	// Create a instance
+
 	struct library lib[100];
 
 	char ar_nm[30], bk_nm[30];
 
-	// Keep the track of the number of
-	// of books available in the library
+	
 	int i, input, count;
 
 	i = input = count = 0;
@@ -30,7 +29,7 @@ int main()
 	while (input != 5) {
 
 		printf("\n\n********######"
-			"WELCOME TO LIBRARY "
+			" WELCOME TO LIBRARY "
 			"#####********\n");
 		printf("\n\n1. Add book infor"
 			"mation\n2. Display "
@@ -109,7 +108,7 @@ int main()
 		// Print total count
 		case 4:
 			printf("\n No of books in "
-				"brary : %d",
+				"library : %d",
 				count);
 			break;
 		case 5:
