@@ -97,11 +97,19 @@ int main()
 				if (strcmp(ar_nm,
 						lib[i].author)
 					== 0)
-					printf("%s %s %d %f",
-						lib[i].book_name,
-						lib[i].author,
-						lib[i].pages,
-						lib[i].price);
+					printf("book name = %s",
+					lib[i].book_name);
+
+					printf("\t author name = %s",
+					lib[i].author);
+					
+					printf("\t pages = %d",
+					lib[i].pages);
+
+					printf("\t price = %f",
+					lib[i].price);
+
+
 			}
 			break;
 
