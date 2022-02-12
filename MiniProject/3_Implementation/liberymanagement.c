@@ -13,17 +13,66 @@
 };*/
 #include "library_management_system.h"
 // Driver Code
+struct library lib[100];
+char ar_nm[30], bk_nm[30];
+int i=0;
+bool addbook(int *count) {
+	printf("Enter book name = ");
+			scanf("%s", lib[i].book_name);
+
+			printf("Enter author name = ");
+			scanf("%s", lib[i].author);
+
+			printf("Enter pages = ");
+			scanf("%d", &lib[i].pages);
+			if(lib[i].pages<0)
+			{
+				printf("you have entered invalid input = %d\n",lib[i].pages);
+				return false;
+			
+			}
+			printf("Enter price = ");
+			scanf("%f", &lib[i].price);
+			if(lib[i].price<0)
+			{
+				printf("you have entered invalid input =%f\n",lib[i].price);
+				return false;
+			}
+			*count=*count+1;
+			i++;
+			return true;
+}
+
+bool search_authorname(int *count){
+	printf("Enter author name : ");
+			scanf("%s", ar_nm);
+			for (i = 0; i < *count; i++) {
+
+				if (strcmp(ar_nm,
+						lib[i].author)
+					== 0)
+					printf("book name = %s",
+					lib[i].book_name);
+
+					printf("\t author name = %s",
+					lib[i].author);
+					
+					printf("\t pages = %d",
+					lib[i].pages);
+
+					printf("\t price = %f",
+					lib[i].price);
+
+
+			}
+
+}
 int main()
 {
 
-	struct library lib[100];
+	int input, count;
 
-	char ar_nm[30], bk_nm[30];
-
-	
-	int i, input, count;
-
-	i = input = count = 0;
+	input = count = 0;
 
 	// Iterate the loop
 	while (input != 5) {
@@ -51,20 +100,9 @@ int main()
 
 		// Add book
 		case 1:
-
-			printf("Enter book name = ");
-			scanf("%s", lib[i].book_name);
-
-			printf("Enter author name = ");
-			scanf("%s", lib[i].author);
-
-			printf("Enter pages = ");
-			scanf("%d", &lib[i].pages);
-
-			printf("Enter price = ");
-			scanf("%f", &lib[i].price);
-			count++;
-
+			addbook(&count);
+			printf("%d",count);
+			printf ("%d",i);
 			break;
 
 		// Print book information
@@ -72,45 +110,27 @@ int main()
 			printf("you have entered"
 				" the following "
 				"information\n");
-			for (i = 0; i < count; i++) {
+			for (int j = 0; j < count; j++) {
 
 				printf("book name = %s",
-					lib[i].book_name);
+					lib[j].book_name);
 
 				printf("\t author name = %s",
-					lib[i].author);
+					lib[j].author);
 
 				printf("\t pages = %d",
-					lib[i].pages);
+					lib[j].pages);
 
 				printf("\t price = %f",
-					lib[i].price);
+					lib[j].price);
 			}
 			break;
 
 		// Take the author name as input
 		case 3:
-			printf("Enter author name : ");
-			scanf("%s", ar_nm);
-			for (i = 0; i < count; i++) {
-
-				if (strcmp(ar_nm,
-						lib[i].author)
-					== 0)
-					printf("book name = %s",
-					lib[i].book_name);
-
-					printf("\t author name = %s",
-					lib[i].author);
-					
-					printf("\t pages = %d",
-					lib[i].pages);
-
-					printf("\t price = %f",
-					lib[i].price);
-
-
-			}
+			search_authorname(&count);
+		
+			
 			break;
 
 		// Print total count
