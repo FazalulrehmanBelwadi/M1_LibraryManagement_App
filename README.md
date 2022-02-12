@@ -20,5 +20,6 @@
 |4_TestPlan |Documents with test plan and Procedures |
 
 # References
-|https://github.com/SonikaAalla/Stepin_Librarymanagmentsystem/tree/main/1_Requirments|
-|https://www.geeksforgeeks.org/e-library-management-system/|
+https://github.com/SonikaAalla/Stepin_Librarymanagmentsystem/tree/main/1_Requirments
+
+https://www.geeksforgeeks.org/e-library-management-system/
