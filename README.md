@@ -9,6 +9,8 @@
 ![Code grade](https://api.codiga.io/project/31034/score/svg)
 ![Code grade](https://api.codiga.io/project/31034/status/svg)
 
+
+
 [![C/C++ CI](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/staticcpp.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/staticcpp.yml)
 
 # Folder Structure
