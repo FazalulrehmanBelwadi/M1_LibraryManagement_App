@@ -15,6 +15,9 @@
 ### Build Linux 
 [![Build Linux](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Linux.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Linux.yml)
 
+### Unit Testing
+[![Unit testing](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Unit.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Unit.yml)
+
 # Folder Structure
 
 |Folder|Description |
