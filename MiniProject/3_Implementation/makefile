@@ -14,8 +14,8 @@ DeleteTextbook.c\
 IssueTextbook.c\
 SearchTextbook.c\
 viewTextbooks.c\
-unity/unity.c\
-test/test.c
+UNITY/unity.c\
+Test/test.c
 
 #Path to the header file
 INC_HEADER = INC
