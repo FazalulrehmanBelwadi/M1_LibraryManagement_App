@@ -26,6 +26,8 @@
 |2_Architecture |Documents Specifying design details |
 |3_Implementation |All code and Documentation |
 |4_TestPlan |Documents with test plan and Procedures |
+|5_ImagesandVideos|Output Images|
+|6_Report|Summary of Project|
 
 # References
 https://github.com/SonikaAalla/Stepin_Librarymanagmentsystem/
