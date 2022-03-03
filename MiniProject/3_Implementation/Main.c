@@ -1,147 +1,242 @@
-// C program for the library
-// Management System
-/*#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>*/
-
-
-/*struct library {
-	char book_name[20];
-	char author[20];
-	int pages;
-	float price;
-};*/
 #include "library_management_system.h"
-// Driver Code
-struct library lib[100];
-char ar_nm[30], bk_nm[30];
-int i=0;
-bool addbook(int *count) {
-	printf("Enter book name = ");
-			scanf("%s", lib[i].book_name);
+check_variable Textbook_Addon(int id,char title[],char author[])
+{
 
-			printf("Enter author name = ");
-			scanf("%s", lib[i].author);
+    FILE *fp=NULL;
+    fp=fopen("bookLibrary.dat","ab+");
 
-			printf("Enter pages = ");
-			scanf("%d", &lib[i].pages);
-			if(lib[i].pages<0)
-			{
-				printf("you have entered invalid input = %d\n",lib[i].pages);
-				return false;
-			
-			}
-			printf("Enter price = ");
-			scanf("%f", &lib[i].price);
-			if(lib[i].price<0)
-			{
-				printf("you have entered invalid input =%f\n",lib[i].price);
-				return false;
-			}
-			*count=*count+1;
-			i++;
-			return true;
-}
+    if(fp == NULL)
+    {
+        printf("\nError: while opening file\n");
+        return fail;
+    }
+    else
+    {
 
-bool search_authorname(int *count){
-	printf("Enter author name : ");
-			scanf("%s", ar_nm);
-			for (i = 0; i < *count; i++) {
+        book *newBook = NULL;
+        newBook = malloc(sizeof(book));
 
-				if (strcmp(ar_nm,
-						lib[i].author)
-					== 0)
-					printf("book name = %s",
-					lib[i].book_name);
+        newBook->Textbook_id = id;
+        strcpy(newBook->Textbook_name,title);
 
-					printf("\t author name = %s",
-					lib[i].author);
-					
-					printf("\t pages = %d",
-					lib[i].pages);
+         strcpy(newBook->Author_name,author);
 
-					printf("\t price = %f",
-					lib[i].price);
-
-
-			}
+        fwrite(newBook,sizeof(book),1,fp);
+        fclose(fp);
+        free(newBook);
+    return pass;
+    }
 
 }
+check_variable Textbook_Delete(int id)
+{
+
+
+
+    FILE *fp=NULL;
+    FILE *ft=NULL;
+    fp = fopen("bookLibrary.dat","rb");
+    ft = fopen("temp.dat","wb");
+
+    if(fp==NULL || ft==NULL)
+        {
+            printf("\nError: While opening file:\n");
+            return fail;
+        }
+    else
+    {
+        rewind(fp);
+        book *discarded_book = (book*)malloc(sizeof(book));
+    while(fread(discarded_book,sizeof(book),1,fp)==1)
+    {
+        if(id != discarded_book->Textbook_id)
+        {
+
+            fwrite(discarded_book,sizeof(book),1,ft);
+
+
+        }
+
+
+
+
+    }
+    fclose(fp);
+    fclose(ft);
+    free(discarded_book);
+
+    remove("bookLibrary.dat");
+    rename("temp.dat","bookLibrary.dat");
+
+    return pass;
+
+
+        }
+
+}
+
+check_variable Textbook_search(int id)
+{
+
+    FILE *fp=NULL;
+    fp = fopen("bookLibrary.dat","rb");
+    if(fp==NULL)
+    {
+        printf("\nError while opening file in search area\n");
+        return fail;
+    }
+    else
+    {
+
+        book *book_to_find=(book*)malloc(sizeof(book));
+        while(fread(book_to_find,sizeof(book),1,fp))
+    {
+        if(book_to_find->Textbook_id==id)
+        {
+
+            printf("\nTextbook Id: %d\t\tTextbook Name: %s\t\tAuthor Name: %s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
+            fclose(fp);
+            free(book_to_find);
+            return pass;
+        }
+    }
+
+    fclose(fp);
+    free(book_to_find);
+    printf("\nSpecified book is not present\n");
+
+    return fail;
+    }
+}
+check_variable Textbook_Issue(int id)
+{
+    char title1[20];
+    FILE *fp=NULL;
+    fp = fopen("bookLibrary.dat","rb");
+    if(fp==NULL)
+    {
+        printf("\nError while opening file in issuing book\\n");
+        return fail;
+    }
+    else
+    {    
+        scanf("%19s student name",title1);
+        book *book_to_find=(book*)malloc(sizeof(book));
+        while(fread(book_to_find,sizeof(book),1,fp))
+    {
+        if(book_to_find->Textbook_id==id)
+        {
+
+            printf("\nTextbook id: %d\t\tTextbook Name: %s\t\tAuthor Name: %s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
+            printf("\n Book is issued to %s \n",title1);
+            fclose(fp);
+            free(book_to_find);
+            return pass;
+        }
+    }
+
+    fclose(fp);
+    free(book_to_find);
+    printf("\nSpecified book is not present\n");
+
+    return fail;
+    }
+}
+check_variable Textbook_view()
+{
+
+    FILE *fp=NULL;
+    fp=fopen("bookLibrary.dat","rb");
+
+    if(fp==NULL)
+    {
+        printf("\nERROR:\n");
+        return fail;
+    }
+    else{
+        book *book_to_find=(book*)malloc(sizeof(book));
+    while(fread(book_to_find,sizeof(book),1,fp)==1)
+    {
+        printf("\n%d\t\t\t%s\t\t\t%s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
+    }
+    fclose(fp);
+    free(book_to_find);
+
+    return pass;
+    }
+}
+
+
 int main()
 {
 
-	int input, count;
+    int id,choice,success;
 
-	input = count = 0;
+    char title[20],Author_Name[20];
 
-	// Iterate the loop
-	while (input != 5) {
 
-		printf("\n\n********######"
-			" WELCOME TO LIBRARY "
-			"#####********\n");
-		printf("\n\n1. Add book infor"
-			"mation\n2. Display "
-			"book information\n");
-		printf("3. List all books of "
-			"given author\n");
-		printf(
-			"4. List the count of book"
-			"s in the library\n");
-		printf("5. Exit");
+    printf("\n\t\t\t--------------- WELCOME TO LIBRARY MANAGEMENT SYSTEM-----------------\n");
+    printf("\n\t\t\t-------------------------- MAIN MENU --------------------------------\n");
+    printf("\n\t\t\t1. Add TextBooks");
+    printf("\n\t\t\t2. Delete Textbooks");
+    printf("\n\t\t\t3. View TextBooks");
+    printf("\n\t\t\t4. Search Textbook");
+    printf("\n\t\t\t5. Issue Textbooks");
+    printf("\n\t\t\t6. Close Management System");
+    printf("\n\t\t\t-----------------------------------------------------------------------------------------\n");
+    printf("\n\t\t\t Enter your choice: ");
+    scanf("%d",&choice);
+    switch(choice)
+    {
+        case 1:
+        printf("\nTextbook ID: ");
+        scanf("%d",&id);
+        fflush(stdin);
+        printf("\nTextbook Name:");
 
-		// Enter the book details
-		printf("\n\nEnter one of "
-			"the above: ");
-		scanf("%d", &input);
-
-		// Process the input
-		switch (input) {
-
-		// Add book
-		case 1:
-			addbook(&count);
-			printf("%d",count);
-			printf ("%d",i);
-			break;
-
-		// Print book information
-		case 2:
-			printf("you have entered"
-				" the following "
-				"information\n");
-			for (int j = 0; j < count; j++) {
-
-				printf("book name = %s",
-					lib[j].book_name);
-
-				printf("\t author name = %s",
-					lib[j].author);
-
-				printf("\t pages = %d",
-					lib[j].pages);
-
-				printf("\t price = %f",
-					lib[j].price);
-			}
-			break;
-
-		// Take the author name as input
-		case 3:
-			search_authorname(&count);
-		
-			
-			break;
-
-		// Print total count
-		case 4:
-			printf("\n No of books in "
-				"library : %d",
-				count);
-			break;
-		case 5:
-			exit(0);
-		}
-	}
-	return 0;
+	scanf("%19s",title);
+       printf("Author Name: ");
+        fflush(stdin);
+        //gets(author);
+	scanf("%19s",Author_Name);
+        success=Textbook_Addon(id,title,Author_Name);
+        break;
+        case 2:
+        printf("\nTextbook ID: ");
+        scanf("%d\n",&id);
+        success=Textbook_Delete(id);
+        break;
+        case 3:
+        success=Textbook_view();
+        break;
+        case 4:
+        printf("\nTextbook ID:");
+        scanf("%d\n",&id);
+        success=Textbook_search(id);
+        break;
+        case 5:
+        printf("\nTextbook ID: ");
+        scanf("%d\n",&id);
+        success=Textbook_Issue(id);
+        break;
+        case 6:
+        printf("\n\n\n");
+        exit(1);
+        default:
+        printf("\n\t\t\t\t\t\t Invalid Input Entered");
+        break;
+     }
+    if(success == pass)
+    {
+        printf("\nSuccessful\n");
+    }
+    else if(success==fail)
+    {
+        printf("\nUnsuccessful\n");
+    }
+    else{
+        printf("\nError\n");
+    }
+return 0;
 }
+

@@ -1,19 +1,43 @@
 #include"library_management_system.h"
 #include"unity_internals.h"
 #include"unity.h"
-#include"liberymanagement.c"
 
-/*struct library lib[100];
-char ar_nm[30], bk_nm[30];
-int i=0;*/
-int count=0;
-void test_addbook(void)
-{
-     TEST_ASSERT_EQUAL(1,addbook(&count));
+void setUp(){}
+
+void tearDown(){}
+
+
+void test_Textbook_Addon(void){
+    TEST_ASSERT_EQUAL(pass,Textbook_Addon(125, "Travis", "Chalizard"));
 }
 
-/*void test_searchbook(void)
-{
-    TEST_ASSERT_EQUAL(false,searchbook(-2));
-    TEST_ASSERT_EQUAL(true,searchbook(125));
-}*/
+void test_Textbook_view(void){
+    TEST_ASSERT_EQUAL(pass,Textbook_view());
+}
+
+void test_searchbook(void){
+    TEST_ASSERT_EQUAL(fail,searchbook(-2));
+    TEST_ASSERT_EQUAL(pass,searchbook(125));
+}
+
+
+
+void test_Textbook_Delete(void){
+    TEST_ASSERT_EQUAL(pass,Textbook_Delete(125));
+}        
+
+void test_Textbook_Issue(void){
+    TEST_ASSERT_EQUAL(pass,Textbook_Issue(125));
+}
+
+int main(){
+    UNITY_BEGIN();
+
+    RUN_TEST(test_Textbook_Addon);
+    RUN_TEST(test_searchbook);
+    RUN_TEST(test_Textbook_Issue);
+    RUN_TEST(test_Textbook_Delete);
+    RUN_TEST(test_Textbook_view);
+    
+    return UNITY_END();
+}
