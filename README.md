@@ -10,7 +10,7 @@
 ![Code grade](https://api.codiga.io/project/31034/status/svg)
 
 ### Cpp Check
-[![C/C++ CI](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/staticcpp.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/staticcpp.yml)
+[![Cppcheck](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Static.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Static.yml)
 
 ### Build Linux 
 [![Build Linux](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/main.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/main.yml)
