@@ -13,7 +13,6 @@
 [![Cppcheck](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Static.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/Static.yml)
 
 ### Build Linux 
-[![Build Linux](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/main.yml/badge.svg)](https://github.com/FazalulrehmanBelwadi/M1_LibraryManagement_App/actions/workflows/main.yml)
 
 # Folder Structure
 
