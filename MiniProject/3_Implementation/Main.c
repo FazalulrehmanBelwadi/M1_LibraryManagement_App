@@ -9,6 +9,12 @@
  * 
  */
 #include "library_management_system.h"
+#include"AddTextbook.c"
+#include"DeleteTextbook.c"
+#include"IssueTextbook.c"
+#include"ViewTextbook.c"
+#include"SearchTextbook.c"
+
 /**
  * @brief 
  * 

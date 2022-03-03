@@ -1,7 +1,11 @@
 #include"library_management_system.h"
 #include"unity_internals.h"
 #include"unity.h"
-
+#include"AddTextbook.c"
+#include"DeleteTextbook.c"
+#include"IssueTextbook.c"
+#include"ViewTextbook.c"
+#include"SearchTextbook.c"
 void setUp(){}
 
 void tearDown(){}
@@ -15,7 +19,7 @@ void test_Textbook_view(void){
     TEST_ASSERT_EQUAL(pass,Textbook_view());
 }
 
-void test_searchbook(void){
+void test_Textbook_search(void){
     TEST_ASSERT_EQUAL(fail,searchbook(-2));
     TEST_ASSERT_EQUAL(pass,searchbook(125));
 }
@@ -34,7 +38,7 @@ int main(){
     UNITY_BEGIN();
 
     RUN_TEST(test_Textbook_Addon);
-    RUN_TEST(test_searchbook);
+    RUN_TEST(test_Textbook_search);
     RUN_TEST(test_Textbook_Issue);
     RUN_TEST(test_Textbook_Delete);
     RUN_TEST(test_Textbook_view);
