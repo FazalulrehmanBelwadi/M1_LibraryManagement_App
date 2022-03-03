@@ -2,9 +2,19 @@
 PROJECT_NAME = Liberary Management System
 
 #All Source code file
-SRC = main.c\
+SRC = Main.c\
+AddTextbook.c\
+DeleteTextbook.c\
+IssueTextbook.c\
+SearchTextbook.c\
+viewTextbooks.c
 
-TEST_SRC = unity/unity.c
+TEST_SRC = AddTextbook.c\
+DeleteTextbook.c\
+IssueTextbook.c\
+SearchTextbook.c\
+viewTextbooks.c\
+unity/unity.c\
 test/test.c
 
 #Path to the header file

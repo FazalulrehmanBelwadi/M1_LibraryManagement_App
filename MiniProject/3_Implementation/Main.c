@@ -1,171 +1,19 @@
+/**
+ * @file Main.c
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2022-03-03
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include "library_management_system.h"
-check_variable Textbook_Addon(int id,char title[],char author[])
-{
-
-    FILE *fp=NULL;
-    fp=fopen("bookLibrary.dat","ab+");
-
-    if(fp == NULL)
-    {
-        printf("\nError: while opening file\n");
-        return fail;
-    }
-    else
-    {
-
-        book *newBook = NULL;
-        newBook = malloc(sizeof(book));
-
-        newBook->Textbook_id = id;
-        strcpy(newBook->Textbook_name,title);
-
-         strcpy(newBook->Author_name,author);
-
-        fwrite(newBook,sizeof(book),1,fp);
-        fclose(fp);
-        free(newBook);
-    return pass;
-    }
-
-}
-check_variable Textbook_Delete(int id)
-{
-
-
-
-    FILE *fp=NULL;
-    FILE *ft=NULL;
-    fp = fopen("bookLibrary.dat","rb");
-    ft = fopen("temp.dat","wb");
-
-    if(fp==NULL || ft==NULL)
-        {
-            printf("\nError: While opening file:\n");
-            return fail;
-        }
-    else
-    {
-        rewind(fp);
-        book *discarded_book = (book*)malloc(sizeof(book));
-    while(fread(discarded_book,sizeof(book),1,fp)==1)
-    {
-        if(id != discarded_book->Textbook_id)
-        {
-
-            fwrite(discarded_book,sizeof(book),1,ft);
-
-
-        }
-
-
-
-
-    }
-    fclose(fp);
-    fclose(ft);
-    free(discarded_book);
-
-    remove("bookLibrary.dat");
-    rename("temp.dat","bookLibrary.dat");
-
-    return pass;
-
-
-        }
-
-}
-
-check_variable Textbook_search(int id)
-{
-
-    FILE *fp=NULL;
-    fp = fopen("bookLibrary.dat","rb");
-    if(fp==NULL)
-    {
-        printf("\nError while opening file in search area\n");
-        return fail;
-    }
-    else
-    {
-
-        book *book_to_find=(book*)malloc(sizeof(book));
-        while(fread(book_to_find,sizeof(book),1,fp))
-    {
-        if(book_to_find->Textbook_id==id)
-        {
-
-            printf("\nTextbook Id: %d\t\tTextbook Name: %s\t\tAuthor Name: %s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
-            fclose(fp);
-            free(book_to_find);
-            return pass;
-        }
-    }
-
-    fclose(fp);
-    free(book_to_find);
-    printf("\nSpecified book is not present\n");
-
-    return fail;
-    }
-}
-check_variable Textbook_Issue(int id)
-{
-    char title1[20];
-    FILE *fp=NULL;
-    fp = fopen("bookLibrary.dat","rb");
-    if(fp==NULL)
-    {
-        printf("\nError while opening file in issuing book\\n");
-        return fail;
-    }
-    else
-    {    
-        scanf("%19s student name",title1);
-        book *book_to_find=(book*)malloc(sizeof(book));
-        while(fread(book_to_find,sizeof(book),1,fp))
-    {
-        if(book_to_find->Textbook_id==id)
-        {
-
-            printf("\nTextbook id: %d\t\tTextbook Name: %s\t\tAuthor Name: %s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
-            printf("\n Book is issued to %s \n",title1);
-            fclose(fp);
-            free(book_to_find);
-            return pass;
-        }
-    }
-
-    fclose(fp);
-    free(book_to_find);
-    printf("\nSpecified book is not present\n");
-
-    return fail;
-    }
-}
-check_variable Textbook_view()
-{
-
-    FILE *fp=NULL;
-    fp=fopen("bookLibrary.dat","rb");
-
-    if(fp==NULL)
-    {
-        printf("\nERROR:\n");
-        return fail;
-    }
-    else{
-        book *book_to_find=(book*)malloc(sizeof(book));
-    while(fread(book_to_find,sizeof(book),1,fp)==1)
-    {
-        printf("\n%d\t\t\t%s\t\t\t%s",book_to_find->Textbook_id,book_to_find->Textbook_name,book_to_find->Author_name);
-    }
-    fclose(fp);
-    free(book_to_find);
-
-    return pass;
-    }
-}
-
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 
 int main()
 {
