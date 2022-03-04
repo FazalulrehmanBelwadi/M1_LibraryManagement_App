@@ -83,7 +83,7 @@ Libraries now send and retrieve data from databases to help better manage invent
 |LLR2|BOOKS INFO|IMPLEMENTED|
 |LLR3|SEARCH BOOKS|IMPLEMENTED|
 |LLR4|VIEW BOOKS|IMPLEMENTED|
-|LLR5|COUNT BOOKSS|IMPLEMENTED|
+|LLR5|ISSUE BOOKSS|IMPLEMENTED|
 
 
 
