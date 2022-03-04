@@ -3,23 +3,23 @@ PROJECT_NAME = Liberary Management System
 
 #All Source code file
 SRC = Main.c\
-AddTextbook.c\
-DeleteTextbook.c\
-IssueTextbook.c\
-SearchTextbook.c\
-viewTextbooks.c
+Textbook_Add.c\
+Textbook_delete.c\
+Textbook_issue.c\
+Textbook_search.c\
+Textbooks_view.c
 
-TEST_SRC = AddTextbook.c\
-DeleteTextbook.c\
-IssueTextbook.c\
-SearchTextbook.c\
-viewTextbooks.c\
-UNITY/unity.c\
-Test/test.c
+TEST_SRC = Textbook_Add.c\
+Textbook_delete.c\
+Textbook_issue.c\
+Textbook_search.c\
+Textbooks_view.c\
+unity.c\
+test.c
 
 #Path to the header file
-INC_HEADER = INC
-INC_TEST = UNITY
+INC_HEADER = 3_Implementation
+INC_TEST = 3_Implementation
 
 #To check if the OS is windows or linux and set the executable file extension and delete command accordingly
 ifdef OS
