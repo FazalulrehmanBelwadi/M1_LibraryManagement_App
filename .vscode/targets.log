@@ -8,7 +8,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # This program built for i386-pc-mingw32
  
 
-# Make data base, printed on Thu Mar 03 22:49:29 2022
+# Make data base, printed on Fri Mar 04 09:41:35 2022
 
 # Variables
 
@@ -34,7 +34,6 @@ HOMEDRIVE = C:
 CURDIR := f:/Repor/M1_LibraryManagement_App
 # default
 SHELL := C:/WinAVR-20100110/utils/bin/sh.exe
- 
 # environment
 WINDIR = C:\Windows
 # environment
@@ -54,12 +53,13 @@ PROGRAMW6432 = C:\Program Files
 # environment
 PROGRAMDATA = C:\ProgramData
 # environment
-VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-ba994f55-13c9-4d9e-9957-f9ef25816a4d-sock
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-26c0c0f6-2783-4967-899a-3f3b6db12090-sock
 # environment
 VSCODE_CWD = C:\Users\Fazalulrehman\AppData\Local\Programs\Microsoft VS Code
 # environment
 PATH = C:\WinAVR-20100110\bin;C:\WinAVR-20100110\utils\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C;C:\Users\Fazalulrehman\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Dr. Memory\bin\;C:\Users\Fazalulrehman\AppData\Local\Programs\Microsoft VS Code\bin;C:\MinGW\bin;C:\WinAVR-20100110\avr\bin;
-# environment
+# environ 
+ment
 COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 PROCESSOR_ARCHITECTURE = x86
@@ -80,7 +80,7 @@ SYNAPROGDIR = Synaptics\SynTP
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11108_MNWTEJGVKXYAWNRI
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_11860_SYPNPGSPOCOSWIXR
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -188,7 +188,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 6
 # environment
-VSCODE_PID = 11108
+VSCODE_PID = 11860
 # environment
 USERDOMAIN_ROAMINGPROFILE = DESKTOP-862QDA1
 # variable set hash-table stats:
@@ -200,7 +200,7 @@ USERDOMAIN_ROAMINGPROFILE = DESKTOP-862QDA1
 
 # Directories
 
-# . (key f:/Repor/M1_LibraryManagement_App, mtime 1646322971): 7 files, no impossibilities.
+# . (key f:/Repor/M1_LibraryManagement_App, mtime 1646332804): 7 files, no impossibilities.
 # C:\WinAVR-20100110\bin (key C:/WinAVR-20100110/bin, mtime 1644846919): 75 files, no impossibilities.
 # C:\WinAVR-20100110\utils\bin (key C:/WinAVR-20100110/utils/bin, mtime 1644846934): 99 files, no impossibilities so far.
 
@@ -266,7 +266,7 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Mar 03 22:49:29 2022
+# Finished Make data base on Fri Mar 04 09:41:35 2022
 
  
 make.exe: *** No rule to make target `all'.  Stop.

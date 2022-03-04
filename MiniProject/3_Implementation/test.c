@@ -11,11 +11,6 @@
 #include"library_management_system.h"
 #include"unity_internals.h"
 #include"unity.h"
-#include"AddTextbook.c"
-#include"DeleteTextbook.c"
-#include"IssueTextbook.c"
-#include"ViewTextbook.c"
-#include"SearchTextbook.c"
 
 /**
  * @brief Set the Up object
